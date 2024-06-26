@@ -1,3 +1,4 @@
+let numbersContainer = document.querySelector('#numbersContainer');
 let display = document.querySelector('#display');
 let clearButton = document.querySelector('#clearButton');
 let positiveNegativeButton = document.querySelector('#positiveNegativeButton');
@@ -44,5 +45,23 @@ let subtractNumbers = () => {
     return result;
 }
 
+let setNumberOne = () => {
+    target = event.target;
 
+    switch(target.id) {
+        case 'sevenButton':
+            if (!numberOne) {
+                numberOne = "target.id";
+                display.value = numberOne;
+                console.log(numberOne);
+                break
+            } else {
+                numberOne = numberOne.concat('7');
+                display.value = numberOne;
+                console.log(numberOne);
+            }    
+            break
+    }
+}
 
+numbersContainer.addEventListener('click', setNumberOne);
