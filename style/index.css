@@ -118,7 +118,7 @@ body {
     color: #eefcff;
 }
 
-#zeroButton {
+.zeroButton {
     height: 78px;
     width: 166px;
     background-color: #7c919c;
