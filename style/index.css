@@ -31,7 +31,7 @@ body {
     height: 60svh;
     min-height: 581px;
     width: 39svh;
-    min-width: 350px;
+    min-width: 378px;
 }
 
 .calculator {
@@ -72,7 +72,7 @@ body {
 #operatorsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     gap: 10px;
     height: 100%;
