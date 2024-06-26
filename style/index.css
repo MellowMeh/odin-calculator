@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: #eefcff;
 }
 
 .header {
@@ -23,11 +24,17 @@ body {
     align-items: center;
 }
 .container {
-    background-color: black;
+    background-color: #3c4043;
+    display: flex;
     height: 55svh;
+    min-height: 532px;
     width: 45svh;
-    border-style: solid;
-    border-color: red;
+    min-width: 435px;
+}
+
+.calculator {
+    background-color: #1b1b1b;
+    
 }
 
 .footer {
@@ -35,5 +42,5 @@ body {
     width: 99svw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
