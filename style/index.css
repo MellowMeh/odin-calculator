@@ -34,7 +34,37 @@ body {
 
 .calculator {
     background-color: #1b1b1b;
-    
+    display: flex;
+    flex-direction: column;
+}
+
+#inputs {
+    display: flex;
+}
+
+#numbers {
+    border-style: solid;
+    border-color: red;
+}
+
+.numberButtons {
+    height: 101px;
+    width: 101px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+#zeroButton {
+    height: 101px;
+    width: 202px;
+    background-color: #bbb;
+}
+
+.operatorButtons {
+    height: 101px;
+    width: 101px;
+    background-color: #bbb;
+    border-radius: 50%;
 }
 
 .footer {
