@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border-style: none;
 }
 
 input::-webkit-outer-spin-button,
@@ -105,28 +106,35 @@ body {
 }
 
 .numberButtons {
-    height: 80px;
-    width: 80px;
+    height: 78px;
+    width: 78px;
     background-color: #7c919c;
     border-radius: 50%;
+    font-family: monospace;
+    font-size: 30px;
+    color: #eefcff;
 }
 
 #numberTopRow {
     background-color: #b4d1e0;
+    color: #1b1b1b;
 }
 
 #zeroButton {
-    height: 80px;
-    width: 170px;
+    height: 78px;
+    width: 166px;
     background-color: #7c919c;
     border-radius: 45px;
 }
 
 .operatorButtons {
     background-color: #03b1fc;
-    height: 80px;
-    width: 80px;
+    height: 78px;
+    width: 78px;
     border-radius: 50%;
+    font-family: monospace;
+    font-size: 30px;
+    color: #eefcff;
 }
 
 .footer {
