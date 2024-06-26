@@ -51,7 +51,7 @@ let setNumberOne = () => {
     switch(target.id) {
         case 'sevenButton':
             if (!numberOne) {
-                numberOne = "target.id";
+                numberOne = "7";
                 display.value = numberOne;
                 console.log(numberOne);
                 break
