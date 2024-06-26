@@ -47,21 +47,15 @@ let subtractNumbers = () => {
 
 let setNumberOne = () => {
     target = event.target;
-
-    switch(target.id) {
-        case 'sevenButton':
-            if (!numberOne) {
-                numberOne = "7";
-                display.value = numberOne;
-                console.log(numberOne);
-                break
-            } else {
-                numberOne = numberOne.concat('7');
-                display.value = numberOne;
-                console.log(numberOne);
-            }    
-            break
-    }
+    if (!numberOne) {
+        numberOne = target.id;
+        display.value = numberOne;
+        console.log(numberOne);
+    } else {
+        numberOne = numberOne.concat(target.id);
+        display.value = numberOne;
+        console.log(numberOne);
+    }    
 }
 
 numbersContainer.addEventListener('click', setNumberOne);
