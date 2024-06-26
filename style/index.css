@@ -118,11 +118,6 @@ body {
     color: #eefcff;
 }
 
-#numberTopRow {
-    background-color: #b4d1e0;
-    color: #1b1b1b;
-}
-
 #zeroButton {
     height: 78px;
     width: 166px;
@@ -138,6 +133,11 @@ body {
     font-family: monospace;
     font-size: 30px;
     color: #eefcff;
+}
+
+.numberTopRow {
+    background-color: #b4d1e0;
+    color: #1b1b1b;
 }
 
 .footer {
