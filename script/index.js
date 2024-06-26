@@ -47,15 +47,35 @@ let subtractNumbers = () => {
 
 let setNumberOne = () => {
     target = event.target;
+    if (!operator) {
+        if (!numberOne) {
+            numberOne = target.id;
+            display.value = numberOne;
+            console.log(numberOne);
+        } else {
+            numberOne = numberOne.concat(target.id);
+            display.value = numberOne;
+            console.log(numberOne);
+        }  
+    }  
+}
+
+//Thought process: the selection of the operator is the point at which pressing number buttons stops adding numbers to numberOne and starts to create numberTwo. So, if operator is not yet selected any button press goes to numberOne. If operator is selected, button presses go to numberTwo. BUT, you should only be able to select an operator only after numberOne has a value.
+
+let setOperator = () => {
+    target = event.target
+
     if (!numberOne) {
-        numberOne = target.id;
-        display.value = numberOne;
-        console.log(numberOne);
+        display.value = 'Error';
     } else {
-        numberOne = numberOne.concat(target.id);
-        display.value = numberOne;
-        console.log(numberOne);
-    }    
+        switch(target.id) {
+            case 'divideButton':
+                console.log('divide button');
+                break
+        }
+    }
 }
 
 numbersContainer.addEventListener('click', setNumberOne);
+numbersContainer.addEventListener('touch', setNumberOne);
+operatorsContainer.addEventListener('click', setOperator);
