@@ -116,9 +116,11 @@ body {
     font-family: monospace;
     font-size: 30px;
     color: #eefcff;
-    display: inline-block;
 }
 
+#clearButton {
+    display: table-cell;
+}
 .zeroButton {
     height: 78px;
     width: 166px;
