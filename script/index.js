@@ -162,20 +162,24 @@ let setPercentage = () => {
     if (!operator) {
         if (numberOne > 1) {
             numberOne = numberOne/100;
+            numberOne = Math.round(numberOne*10000)/10000;
             display.value = numberOne;
             console.log(numberOne);
         } else {
             numberOne = numberOne*100;
+            numberOne = Math.round(numberOne*10000)/10000;
             display.value = numberOne;
             console.log(numberOne);
         }
     } else {
         if (numberTwo > 1) {
             numberTwo = numberTwo/100;
+            numberTwo = Math.round(numberTwo*10000)/10000;
             display.value = numberTwo;
             console.log(numberTwo);
         } else {
             numberTwo = numberTwo*100;
+            numberTwo = Math.round(numberTwo*10000)/10000;
             display.value = numberTwo;
             console.log(numberTwo);
         }
