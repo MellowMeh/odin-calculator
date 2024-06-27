@@ -73,7 +73,7 @@ let setOperator = () => {
 
     if (!numberOne) {
         display.value = display.value;
-    } else {
+    } else if (!numberTwo) {
         switch(target.id) {
             case 'divideButton':
                 operator = 'divide';
@@ -92,6 +92,8 @@ let setOperator = () => {
                 console.log(operator);
                 break
         }
+    } else if (numberOne && numberTwo) {
+        getResult();
     }
 }
 
