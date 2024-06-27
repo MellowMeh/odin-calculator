@@ -72,7 +72,7 @@ let setOperator = () => {
     target = event.target
 
     if (!numberOne) {
-        display.value = 'Error';
+        display.value = display.value;
     } else {
         switch(target.id) {
             case 'divideButton':
@@ -238,7 +238,7 @@ let getResult = () => {
                 break
         }
     } else {
-        display.value = 'Error';
+        display.value = display.value;
     }
 }
 
