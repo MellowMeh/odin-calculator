@@ -183,15 +183,22 @@ let setPercentage = () => {
 }
 
 let addDecimal = () => {
-    if (!numberOne) {
+    if (!numberOne && !numberTwo) {
         numberOne = '';
         numberOne += '0.';
         console.log(numberOne);
         display.value = numberOne;
-    }
-    else if (numberOne) {
+    } else if (numberOne && !numberTwo && !operator) {
+        numberOne = numberOne + '.';
+        console.log(numberOne);
+        display.value = numberOne;
+    } else if (numberOne && !numberTwo && operator) {
         numberTwo = '';
         numberTwo += '0.';
+        console.log(numberTwo);
+        display.value = numberTwo;
+    } else if (numberOne && numberTwo) {
+        numberTwo = numberTwo + '.';
         console.log(numberTwo);
         display.value = numberTwo;
     }
