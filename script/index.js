@@ -78,18 +78,22 @@ let setOperator = () => {
             case 'divideButton':
                 operator = 'divide';
                 console.log(operator);
+                document.getElementById('decimalButton').disabled=false;
                 break
             case 'multiplyButton':
                 operator = 'multiply';
                 console.log(operator);
+                document.getElementById('decimalButton').disabled=false;
                 break
             case 'subtractButton':
                 operator = 'subtract';
                 console.log(operator);
+                document.getElementById('decimalButton').disabled=false;
                 break
             case 'addButton':
                 operator = 'add';
                 console.log(operator);
+                document.getElementById('decimalButton').disabled=false;
                 break
         }
     } else if (numberOne && numberTwo) {
@@ -217,6 +221,7 @@ let getResult = () => {
                 console.log('operator is ' + operator);
                 numberOne = roundedResult;
                 console.log('number one is ' + numberOne);
+                document.getElementById('decimalButton').disabled=false;
                 break
             case 'multiply':
                 result = parsedNumberOne*parsedNumberTwo;
@@ -229,6 +234,7 @@ let getResult = () => {
                 console.log('operator is ' + operator);
                 numberOne = roundedResult;
                 console.log('number one is ' + numberOne);
+                document.getElementById('decimalButton').disabled=false;
                 break
             case 'subtract':
                 result = parsedNumberOne-parsedNumberTwo;
@@ -241,6 +247,7 @@ let getResult = () => {
                 console.log('operator is ' + operator);
                 numberOne = roundedResult;
                 console.log('number one is ' + numberOne);
+                document.getElementById('decimalButton').disabled=false;
                 break
             case 'add':
                 result = parsedNumberOne+parsedNumberTwo;
@@ -253,6 +260,7 @@ let getResult = () => {
                 console.log('operator is ' + operator);
                 numberOne = roundedResult;
                 console.log('number one is ' + numberOne);
+                document.getElementById('decimalButton').disabled=false;
                 break
         }
     } else {
