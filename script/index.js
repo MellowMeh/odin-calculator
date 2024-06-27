@@ -161,12 +161,12 @@ let setNegative = () => {
 let setPercentage = () => {
     if (!operator) {
             numberOne = numberOne/100;
-            numberOne = Math.round(numberOne*1000000000000000000)/1000000000000000000;
+            numberOne = Math.round(numberOne*100000000)/100000000;
             display.value = numberOne;
             console.log(numberOne);
     } else {
             numberTwo = numberTwo/100;
-            numberTwo = Math.round(numberTwo*1000000000000000000)/1000000000000000000;
+            numberTwo = Math.round(numberTwo*100000000)/100000000;
             display.value = numberTwo;
             console.log(numberTwo);
     }
