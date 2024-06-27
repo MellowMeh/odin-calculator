@@ -156,6 +156,30 @@ let setNegative = () => {
     }
 }
 
+let setPercentage = () => {
+    if (!operator) {
+        if (numberOne > 1) {
+            numberOne = numberOne/100;
+            display.value = numberOne;
+            console.log(numberOne);
+        } else {
+            numberOne = numberOne*100;
+            display.value = numberOne;
+            console.log(numberOne);
+        }
+    } else {
+        if (numberTwo > 1) {
+            numberTwo = numberTwo/100;
+            display.value = numberTwo;
+            console.log(numberTwo);
+        } else {
+            numberTwo = numberTwo*100;
+            display.value = numberTwo;
+            console.log(numberTwo);
+        }
+    }
+}
+
 let getResult = () => {
     target = event.target;
     if (numberOne && numberTwo && operator) {
@@ -207,3 +231,6 @@ equalButton.addEventListener('touch', getResult);
 clearButton.addEventListener('click', clearData);
 clearButton.addEventListener('touch', clearData);
 positiveNegativeButton.addEventListener('click', setNegative);
+positiveNegativeButton.addEventListener('touch', setNegative);
+percentageButton.addEventListener('click', setPercentage);
+percentageButton.addEventListener('touch', setPercentage);
