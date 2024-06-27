@@ -114,6 +114,16 @@ let setNumberTwo = () => {
     }  
 }
 
+let clearData = () => {
+    display.value = '0';
+    numberOne = '';
+    numberTwo = '';
+    operator = '';
+    console.log(numberOne);
+    console.log(numberTwo);
+    console.log(operator);
+}
+
 let getResult = () => {
     target = event.target;
     if (numberOne && numberTwo && operator) {
@@ -160,3 +170,5 @@ numbersContainer.addEventListener('click', setNumberTwo);
 numbersContainer.addEventListener('touch', setNumberTwo);
 equalButton.addEventListener('click', getResult);
 equalButton.addEventListener('touch', getResult);
+clearButton.addEventListener('click', clearData);
+clearButton.addEventListener('touch', clearData);
