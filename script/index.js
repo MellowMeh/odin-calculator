@@ -182,6 +182,21 @@ let setPercentage = () => {
     }
 }
 
+let addDecimal = () => {
+    if (!numberOne) {
+        numberOne = '';
+        numberOne += '0.';
+        console.log(numberOne);
+        display.value = numberOne;
+    }
+    else if (numberOne) {
+        numberTwo = '';
+        numberTwo += '0.';
+        console.log(numberTwo);
+        display.value = numberTwo;
+    }
+}
+
 let getResult = () => {
     target = event.target;
     if (numberOne && numberTwo && operator) {
@@ -258,5 +273,7 @@ clearButton.addEventListener('click', clearData);
 clearButton.addEventListener('touch', clearData);
 positiveNegativeButton.addEventListener('click', setNegative);
 positiveNegativeButton.addEventListener('touch', setNegative);
+decimalButton.addEventListener('click', addDecimal);
+decimalButton.addEventListener('touch', addDecimal);
 percentageButton.addEventListener('click', setPercentage);
 percentageButton.addEventListener('touch', setPercentage);
