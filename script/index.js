@@ -192,19 +192,37 @@ let getResult = () => {
                 result = parsedNumberOne/parsedNumberTwo;
                 roundedResult = Math.round(result*10000)/10000;
                 display.value = roundedResult;
-                console.log(display.value);
+                console.log('rounded result = ' + roundedResult);
+                numberTwo = '';
+                console.log('number two is ' + numberTwo);
+                operator = '';
+                console.log('operator is ' + operator);
+                numberOne = roundedResult;
+                console.log('number one is ' + numberOne);
                 break
             case 'multiply':
                 result = parsedNumberOne*parsedNumberTwo;
                 roundedResult = Math.round(result*10000)/10000;
                 display.value = roundedResult;
-                console.log(display.value);
+                console.log('rounded result = ' + roundedResult);
+                numberTwo = '';
+                console.log('number two is ' + numberTwo);
+                operator = '';
+                console.log('operator is ' + operator);
+                numberOne = roundedResult;
+                console.log('number one is ' + numberOne);
                 break
             case 'subtract':
                 result = parsedNumberOne-parsedNumberTwo;
                 roundedResult = Math.round(result*10000)/10000;
                 display.value = roundedResult;
-                console.log(display.value);
+                console.log('rounded result = ' + roundedResult);
+                numberTwo = '';
+                console.log('number two is ' + numberTwo);
+                operator = '';
+                console.log('operator is ' + operator);
+                numberOne = roundedResult;
+                console.log('number one is ' + numberOne);
                 break
             case 'add':
                 result = parsedNumberOne+parsedNumberTwo;
