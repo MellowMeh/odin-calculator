@@ -47,15 +47,20 @@ let subtractNumbers = () => {
 
 let setNumberOne = () => {
     target = event.target;
+    acceptedValues = '0123456789';
     if (!operator) {
         if (!numberOne) {
-            numberOne = target.id;
-            display.value = numberOne;
-            console.log('number one is ' + numberOne);
+            if (acceptedValues.includes(target.id)) {
+                numberOne = target.id;
+                display.value = numberOne;
+                console.log('number one is ' + numberOne);
+            }
         } else {
-            numberOne = numberOne.concat(target.id);
-            display.value = numberOne;
-            console.log('number one is ' + numberOne);
+            if (acceptedValues.includes(target.id)) {
+                numberOne = numberOne.concat(target.id);
+                display.value = numberOne;
+                console.log('number one is ' + numberOne);
+            }
         }  
     }  
 }
@@ -71,19 +76,19 @@ let setOperator = () => {
     } else {
         switch(target.id) {
             case 'divideButton':
-                operator = 'divideButton';
+                operator = 'divide';
                 console.log(operator);
                 break
             case 'multiplyButton':
-                operator = 'multiplyButton';
+                operator = 'multiply';
                 console.log(operator);
                 break
             case 'subtractButton':
-                operator = 'subtractButton';
+                operator = 'subtract';
                 console.log(operator);
                 break
             case 'addButton':
-                operator = 'addButton';
+                operator = 'add';
                 console.log(operator);
                 break
         }
@@ -94,15 +99,57 @@ let setNumberTwo = () => {
     target = event.target;
     if (operator) {
         if (!numberTwo) {
-            numberTwo = target.id;
-            display.value = numberTwo;
-            console.log('number two is ' + numberTwo);
+            if (acceptedValues.includes(target.id)) {
+                numberTwo = target.id;
+                display.value = numberTwo;
+                console.log('number one is ' + numberTwo);
+            }
         } else {
-            numberTwo = numberTwo.concat(target.id);
-            display.value = numberTwo;
-            console.log('number two is ' + numberTwo);
+            if (acceptedValues.includes(target.id)) {
+                numberTwo = numberTwo.concat(target.id);
+                display.value = numberTwo;
+                console.log('number two is ' + numberTwo);
+            }
         }  
     }  
+}
+
+let getResult = () => {
+    target = event.target;
+    if (numberOne && numberTwo && operator) {
+        let parsedNumberOne = parseFloat(numberOne);
+        let parsedNumberTwo = parseFloat(numberTwo);
+        console.log(parsedNumberOne);
+        console.log(parsedNumberTwo);
+        switch (operator) {
+            case 'divide':
+                result = parsedNumberOne/parsedNumberTwo;
+                roundedResult = Math.round(result*10000)/10000;
+                display.value = roundedResult;
+                console.log(display.value);
+                break
+            case 'multiply':
+                result = parsedNumberOne*parsedNumberTwo;
+                roundedResult = Math.round(result*10000)/10000;
+                display.value = roundedResult;
+                console.log(display.value);
+                break
+            case 'subtract':
+                result = parsedNumberOne-parsedNumberTwo;
+                roundedResult = Math.round(result*10000)/10000;
+                display.value = roundedResult;
+                console.log(display.value);
+                break
+            case 'add':
+                result = parsedNumberOne+parsedNumberTwo;
+                roundedResult = Math.round(result*10000)/10000;
+                display.value = roundedResult;
+                console.log(display.value);
+                break
+        }
+    } else {
+        display.value = 'Error';
+    }
 }
 
 numbersContainer.addEventListener('click', setNumberOne);
@@ -111,3 +158,5 @@ operatorsContainer.addEventListener('click', setOperator);
 operatorsContainer.addEventListener('touch', setOperator);
 numbersContainer.addEventListener('click', setNumberTwo);
 numbersContainer.addEventListener('touch', setNumberTwo);
+equalButton.addEventListener('click', getResult);
+equalButton.addEventListener('touch', getResult);
