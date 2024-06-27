@@ -65,9 +65,6 @@ let setNumberOne = () => {
     }  
 }
 
-
-//Thought process: the selection of the operator is the point at which pressing number buttons stops adding numbers to numberOne and starts to create numberTwo. So, if operator is not yet selected any button press goes to numberOne. If operator is selected, button presses go to numberTwo. BUT, you should only be able to select an operator only after numberOne has a value.
-
 let setOperator = () => {
     target = event.target
 
