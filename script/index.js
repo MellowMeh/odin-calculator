@@ -124,6 +124,30 @@ let clearData = () => {
     console.log(operator);
 }
 
+let setNegative = () => {
+    if (!operator) {
+        if (Math.sign(numberOne) === 1) {
+            numberOne = '-' + numberOne;
+            display.value = numberOne;
+            console.log(numberOne);
+        } else if (Math.sign(numberOne) === -1) {
+            numberOne = numberOne.slice(1);
+            display.value = numberOne;
+            console.log(numberOne);
+        }
+    } else {
+        if (Math.sign(numberTwo) === 1) {
+            numberTwo = '-' + numberTwo;
+            display.value = numberTwo;
+            console.log(numberTwo);
+        } else if (Math.sign(numberTwo) === -1) {
+            numberTwo = numberTwo.slice(1);
+            display.value = numberTwo;
+            console.log(numberTwo);
+        }
+    }
+}
+
 let getResult = () => {
     target = event.target;
     if (numberOne && numberTwo && operator) {
@@ -162,6 +186,8 @@ let getResult = () => {
     }
 }
 
+
+
 numbersContainer.addEventListener('click', setNumberOne);
 numbersContainer.addEventListener('touch', setNumberOne);
 operatorsContainer.addEventListener('click', setOperator);
@@ -172,3 +198,4 @@ equalButton.addEventListener('click', getResult);
 equalButton.addEventListener('touch', getResult);
 clearButton.addEventListener('click', clearData);
 clearButton.addEventListener('touch', clearData);
+positiveNegativeButton.addEventListener('click', setNegative);
