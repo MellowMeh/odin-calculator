@@ -24,6 +24,7 @@ let equalButton = document.querySelector('#equalButton');
 let numberOne;
 let numberTwo;
 let operator;
+const acceptedValues = '0123456789';
 
 let divideNumbers = () => {
     result = numberOne / numberTwo;
@@ -47,7 +48,6 @@ let subtractNumbers = () => {
 
 let setNumberOne = () => {
     target = event.target;
-    acceptedValues = '0123456789';
     if (!operator) {
         if (!numberOne) {
             if (acceptedValues.includes(target.id)) {
