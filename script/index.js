@@ -248,12 +248,12 @@ let getResult = () => {
 
 numbersContainer.addEventListener('click', setNumberOne);
 numbersContainer.addEventListener('touch', setNumberOne);
-operatorsContainer.addEventListener('click', setOperator);
-operatorsContainer.addEventListener('touch', setOperator);
+operatorsContainer.addEventListener('mouseup', setOperator);
+operatorsContainer.addEventListener('touchend', setOperator);
 numbersContainer.addEventListener('click', setNumberTwo);
 numbersContainer.addEventListener('touch', setNumberTwo);
-equalButton.addEventListener('click', getResult);
-equalButton.addEventListener('touch', getResult);
+operatorsContainer.addEventListener('mousedown', getResult);
+operatorsContainer.addEventListener('touchstart', getResult);
 clearButton.addEventListener('click', clearData);
 clearButton.addEventListener('touch', clearData);
 positiveNegativeButton.addEventListener('click', setNegative);
