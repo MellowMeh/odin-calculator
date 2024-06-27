@@ -119,7 +119,7 @@ body {
 }
 
 #clearButton {
-    display: table-cell;
+    text-align: start;
 }
 .zeroButton {
     height: 78px;
