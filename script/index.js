@@ -178,19 +178,23 @@ let addDecimal = () => {
         numberOne += '0.';
         console.log(numberOne);
         display.value = numberOne;
+        document.getElementById('decimalButton').disabled=true;
     } else if (numberOne && !numberTwo && !operator) {
         numberOne = numberOne + '.';
         console.log(numberOne);
         display.value = numberOne;
+        document.getElementById('decimalButton').disabled=true;
     } else if (numberOne && !numberTwo && operator) {
         numberTwo = '';
         numberTwo += '0.';
         console.log(numberTwo);
         display.value = numberTwo;
+        document.getElementById('decimalButton').disabled=true;
     } else if (numberOne && numberTwo) {
         numberTwo = numberTwo + '.';
         console.log(numberTwo);
         display.value = numberTwo;
+        document.getElementById('decimalButton').disabled=true;
     }
 }
 
