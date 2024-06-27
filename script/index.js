@@ -134,6 +134,10 @@ let setNegative = () => {
             numberOne = numberOne.slice(1);
             display.value = numberOne;
             console.log(numberOne);
+        } else {
+            numberOne = '-';
+            display.value = numberOne;
+            console.log(numberOne);
         }
     } else {
         if (Math.sign(numberTwo) === 1) {
@@ -142,6 +146,10 @@ let setNegative = () => {
             console.log(numberTwo);
         } else if (Math.sign(numberTwo) === -1) {
             numberTwo = numberTwo.slice(1);
+            display.value = numberTwo;
+            console.log(numberTwo);
+        } else {
+            numberTwo = '-';
             display.value = numberTwo;
             console.log(numberTwo);
         }
