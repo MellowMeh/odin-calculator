@@ -51,14 +51,15 @@ let setNumberOne = () => {
         if (!numberOne) {
             numberOne = target.id;
             display.value = numberOne;
-            console.log(numberOne);
+            console.log('number one is ' + numberOne);
         } else {
             numberOne = numberOne.concat(target.id);
             display.value = numberOne;
-            console.log(numberOne);
+            console.log('number one is ' + numberOne);
         }  
     }  
 }
+
 
 //Thought process: the selection of the operator is the point at which pressing number buttons stops adding numbers to numberOne and starts to create numberTwo. So, if operator is not yet selected any button press goes to numberOne. If operator is selected, button presses go to numberTwo. BUT, you should only be able to select an operator only after numberOne has a value.
 
@@ -70,12 +71,43 @@ let setOperator = () => {
     } else {
         switch(target.id) {
             case 'divideButton':
-                console.log('divide button');
+                operator = 'divideButton';
+                console.log(operator);
+                break
+            case 'multiplyButton':
+                operator = 'multiplyButton';
+                console.log(operator);
+                break
+            case 'subtractButton':
+                operator = 'subtractButton';
+                console.log(operator);
+                break
+            case 'addButton':
+                operator = 'addButton';
+                console.log(operator);
                 break
         }
     }
 }
 
+let setNumberTwo = () => {
+    target = event.target;
+    if (operator) {
+        if (!numberTwo) {
+            numberTwo = target.id;
+            display.value = numberTwo;
+            console.log('number two is ' + numberTwo);
+        } else {
+            numberTwo = numberTwo.concat(target.id);
+            display.value = numberTwo;
+            console.log('number two is ' + numberTwo);
+        }  
+    }  
+}
+
 numbersContainer.addEventListener('click', setNumberOne);
 numbersContainer.addEventListener('touch', setNumberOne);
 operatorsContainer.addEventListener('click', setOperator);
+operatorsContainer.addEventListener('touch', setOperator);
+numbersContainer.addEventListener('click', setNumberTwo);
+numbersContainer.addEventListener('touch', setNumberTwo);
